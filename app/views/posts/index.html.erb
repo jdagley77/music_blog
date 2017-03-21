@@ -2,8 +2,11 @@
 
 
 <% @posts.each do |post| %>
-	<p><%=post.title%></p>
+	<h3><%=post.title%></h3>
 	<p><%=post.body%></p>
+	<p><%=post.genre%></p>
+	<p><%=post.post_date%></p>
 
 <% end %>
+
 
