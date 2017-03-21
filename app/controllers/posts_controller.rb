@@ -5,6 +5,7 @@ class PostsController < ApplicationController
 	
 	def index
 		@posts = Post.all
+		@news = MtvNews.news_feed
 	end
 
 end
