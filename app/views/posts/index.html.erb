@@ -10,4 +10,16 @@
 		<% end %>
 <% end %>
 
+<br>
+<br>
+
+<% @news.each do |article| %>
+<%=link_to article["title"], article["url"]%>
+<p><%=article["description"]%></p>
+<p>by <%=article["author"]%></p>
+<br>
+<% end %>
+
+
+
 
