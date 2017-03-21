@@ -3,9 +3,9 @@
 
 <% @posts.each do |post| %>
 	<h3><%=post.title%></h3>
-	<p><%=post.body%></p>
+	<p> <%=truncate(post.body, :length => 120) %></p>
 	<p><%=post.created_at.to_s(:long)%></p>
-
+	<br>
 <% end %>
 
 
