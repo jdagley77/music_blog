@@ -1,1 +1,7 @@
 <h1>Welcome</h1>
+
+
+<% @posts.each do |post| %>
+<p><%=post.title%></p>
+<p><%=post.body%></p>
+<% end %>

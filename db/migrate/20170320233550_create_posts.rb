@@ -1,6 +1,6 @@
-class CreatePostsTable < ActiveRecord::Migration[5.0]
+class CreatePosts < ActiveRecord::Migration[5.0]
   def change
-    create_table :posts_tables do |t|
+    create_table :posts do |t|
       t.datetime :post_date
       t.string :title
       t.text :body
