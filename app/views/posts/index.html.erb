@@ -4,8 +4,7 @@
 <% @posts.each do |post| %>
 	<h3><%=post.title%></h3>
 	<p><%=post.body%></p>
-	<p><%=post.genre%></p>
-	<p><%=post.post_date%></p>
+	<p><%=post.created_at.to_s(:long)%></p>
 
 <% end %>
 
