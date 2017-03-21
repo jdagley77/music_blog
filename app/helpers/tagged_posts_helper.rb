@@ -1,0 +1,2 @@
+module TaggedPostsHelper
+end
