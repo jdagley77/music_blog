@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'devise'
 gem 'record_tag_helper', '~> 1.0'
 gem 'dotenv'
 gem 'httparty'
