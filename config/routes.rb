@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 		resources :posts 
-		resources :categories
-end
+		get 'tags/:tag', to: 'posts#index', as: "tag"
+	end

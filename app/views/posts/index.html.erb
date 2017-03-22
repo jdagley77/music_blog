@@ -1,15 +1,9 @@
 <h1>Welcome</h1>
 
 
-<% @posts.each do |post| %>
-	<h3><%=post.title%></h3>
-	<p> <%=truncate(post.body, :length => 120) %></p>
-	<p><%=post.created_at.to_s(:long)%></p>
-		<% post.tags.each do |tag| %>
-			<p><%=tag.name%></p>
-		<% end %>
-<% end %>
-
+<%= render "new" %>
+<%= link_to "All Tags", posts_path %>
+<%= render @posts.reverse %>
 <br>
 <br>
 
