@@ -1,3 +1,13 @@
+<% if !user_signed_in? %>
+	<p class="sign_in"><%=link_to "Admin Login", new_user_session_path %> </p>
+<% end %>
+
+<% if user_signed_in? %>
+	<button> <%=link_to "New Post", new_post_path %> </button>
+	<button> <%= link_to "Log Out", destroy_user_session_path, :method => :delete %> </button>
+<% end %>
+
+
 <ul>
 	<li Website class="category">Website</li>
 	<li><%=link_to "Blog", root_path%></li>
@@ -11,11 +21,13 @@
 	<li><a href="mailto:hi@jackdagley.me"</a>Email</li>
 </ul>
 
-<%= render "new" %>
+
+
 <%= link_to "All Tags", posts_path %>
 <%= render @posts.reverse %>
 <br>
 <br>
+
 
 <% @news.each do |article| %>
 <%=link_to article["title"], article["url"]%>
