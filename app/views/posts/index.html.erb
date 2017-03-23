@@ -1,18 +1,18 @@
 <%= render "nav" %>
 
+<div class="columns">
+	<div id="posts">
+		<%= link_to "All Tags", posts_path %><br><br>
+		<%= render @posts.reverse %>
+	</div>
 
-<div id="posts">
-	<%= link_to "All Tags", posts_path %>
-	<%= render @posts.reverse %>
+	<div id="news">
+		<% @news.each do |article| %>
+			<p><%=link_to article["title"], article["url"]%></p>
+			<p><%=article["description"]%></p>
+			<p>by <%=article["author"]%></p><br>
+		<% end %>
+	</div>
 </div>
-
-<div id="news">
-	<% @news.each do |article| %>
-		<p><%=link_to article["title"], article["url"]%></p>
-		<p><%=article["description"]%></p>
-		<p>by <%=article["author"]%></p><br>
-	<% end %>
-</div>
-
 
 
