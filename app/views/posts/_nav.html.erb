@@ -1,24 +1,20 @@
-<nav>	
-	<% if !user_signed_in? %>
-		<p class="sign_in"><%=link_to "Admin Login", new_user_session_path %> </p>
-	<% end %>
 
-	<% if user_signed_in? %>
-		<button> <%=link_to "New Post", new_post_path %> </button>
-		<button> <%= link_to "Log Out", destroy_user_session_path, :method => :delete %> </button>
-	<% end %>
-
-
-	<ul>
-		<li Website class="category">Website</li>
-		<li><%=link_to "Blog", root_path%></li>
-		<li>About</li>
-	</ul>
-
-	<ul>
-		<li class="category">Social</li>
-		<li><a href="https://www.linkedin.com/in/jdagley/">Linkedin</a></li>
-		<li><a href="https://github.com/jdagley77">Github</a></li>
-		<li><a href="mailto:hi@jackdagley.me">Email</a></li>
-	</ul>
-</nav>
+        
+        <nav class="nav-links">
+          <ul class="nav-ul">
+        	<li class="nav-li"> <%= link_to "Music Blog", root_path%> </li>
+        	<div class="nav-right">
+	            <li class="nav-li"> <% if !user_signed_in? %>
+					<%=link_to "Admin Login", new_user_session_path %>
+				<% end %>
+				</li>
+	            <li class="nav-li"><%= link_to "Home", root_path %></li>
+	            <li class="nav-li"> <% if user_signed_in? %>
+					<%=link_to "New Post", new_post_path %>
+					<%= link_to "Log Out", destroy_user_session_path, :method => :delete %>
+					<% end %>
+				</li>
+			</div>
+          </ul>
+        </nav>
+      </div>
