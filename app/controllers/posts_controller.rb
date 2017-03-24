@@ -16,8 +16,12 @@ class PostsController < ApplicationController
   end
 	
 	def index
-		# @posts = Post.all
 		@news = MtvNews.news_feed
+		# sets first user to sign up as an admin user
+		if current_user == User.first && !current_user.try(:admin?) && User.count == 1
+  			current_user.update_attribute :admin, true
+		end
+
 		if params[:tag]
     		@posts = Post.tagged_with(params[:tag])
   		else
