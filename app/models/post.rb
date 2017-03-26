@@ -1,6 +1,7 @@
 class Post < ApplicationRecord
 	has_many :tagged_posts
 	has_many :tags, through: :tagged_posts
+	has_many :comments
 
 	def all_tags=(names)
   		self.tags = names.split(",").map do |name|
