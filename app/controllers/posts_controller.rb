@@ -26,7 +26,11 @@ class PostsController < ApplicationController
     		@posts = Post.tagged_with(params[:tag])
   		else
     		@posts = Post.all
-  end
+  		end
+	end
+
+	def show 
+		@post = Post.find(params[:id])
 	end
 
 	private

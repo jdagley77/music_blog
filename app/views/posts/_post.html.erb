@@ -3,7 +3,7 @@
     <strong><%= h(post.title) %></strong><br />
     <sup>From <%= time_ago_in_words(post.created_at)%></sup><br/>
     <div>
-      <%= h(post.body) %>
+      <%= h(post.body)%> <%= link_to "read more...", post_path(post) %>
     </div>
     <div class="tags">
 		<p>Tags: <%=raw tag_links(post.all_tags)%> </p>
