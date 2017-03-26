@@ -5,14 +5,14 @@ class PostsController < ApplicationController
 	end
 
 	def create
-  		@post = Post.new(post_params)
-  		respond_to do |format|
-    if @post.save
-      	format.js # Will search for create.js.erb
-    else
-      	format.html { render root_path }
-    end
-	end
+		@post = Post.new(post_params)
+		respond_to do |format|
+	    if @post.save
+	      	format.js # Will search for create.js.erb
+	    else
+	      	format.html { render root_path }
+	    end
+		end
   end
 	
 	def index
