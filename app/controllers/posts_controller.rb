@@ -13,7 +13,7 @@ class PostsController < ApplicationController
 	      	format.html { render root_path }
 	    end
 		end
-  end
+  	end
 	
 	def index
 		@news = MtvNews.news_feed
