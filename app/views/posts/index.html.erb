@@ -2,7 +2,8 @@
 	<div id="posts">
 		<h2>Articles</h2>
 		<%= link_to "All Tags", posts_path %><br><br>
-		<%= render @posts.reverse %>
+		<%= render @posts.reverse.last(5) %>
+		<%= will_paginate @posts %>
 	</div>
 
 	<div id="news">
