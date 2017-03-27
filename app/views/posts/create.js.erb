@@ -1,3 +1,5 @@
+// if i decide to put the post form on the index page (not relevant currently)...
+
 var new_post = $("<%= escape_javascript(render(partial: @post))%>").hide();
 $('#posts').prepend(new_post);
 $('#post_<%= @post.id %>').fadeIn('slow');
