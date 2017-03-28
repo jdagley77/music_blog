@@ -1,6 +1,10 @@
 $( document ).ready(function() {
-	$("#login-link").click(function(e){
-		e.preventDefault();
+	visible = true
+	$login = $()
+	$(".login-link").click(function(){
+		if (visible) {
+
+		}
 		$(".overlay").fadeToggle("fast");
 	})
 
