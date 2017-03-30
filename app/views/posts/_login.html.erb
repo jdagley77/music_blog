@@ -1,6 +1,4 @@
-<%= link_to "Back", root_path %>
-
-<div id="page overlay">
+<div id="login-pop">	
   <h2>Log in</h2>
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -25,5 +23,7 @@
       <%= f.submit "Log in" %>
     </div>
   <% end %>
+
+	<%= link_to('Register', new_user_registration_path)%>
 
 </div>
