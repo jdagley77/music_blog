@@ -16,10 +16,10 @@
 		<div class="nav-right">
 	        
 	        <% if !user_signed_in? %>
-	        <li class="nav-li ajax"> 
+	        <li class="nav-li"> 
 				<%=link_to "Login", new_user_session_path, class: "login-link" %>
 			</li>
-			<div id="login-pop" style="display: none;">	
+			<div id="login-pop">	
 			  <h2>Log in</h2>
 
 			  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
