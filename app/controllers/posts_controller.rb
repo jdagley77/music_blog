@@ -27,7 +27,7 @@ class PostsController < ApplicationController
   		else
     		@posts = Post.all
   		end
-  		@posts = @posts.order(created_at: :desc).paginate(page:params[:page], per_page: 5 )
+  		@posts = Post.all.order(created_at: "DESC").paginate(:page => params[:page], per_page: 5)
 	end
 
 	def show 
