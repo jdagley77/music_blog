@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap";
+ @import "bootstrap-sprockets";
+ @import "comments.scss";
+ @import "styles.scss";
+ @import "tagged_posts.scss";
+ @import "tags.scss";

@@ -1,9 +1,9 @@
 <div class="columns">
 	<div id="posts">
 		<h2>Articles</h2>
-		<%= link_to "All Tags", posts_path %><br><br>
-		<%= render @posts.reverse.last(5) %>
-		<%= will_paginate @posts %>
+		<%= link_to "All Tags", posts_path, class: 'btn btn-primary btn-xs' %><br><br>
+		<%= render @posts %>
+ 			<%= will_paginate @posts, renderer: BootstrapPagination::Rails, previous_label: "Newer", next_label: "Older" %>		
 	</div>
 
 	<div id="news">
