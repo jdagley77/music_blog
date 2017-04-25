@@ -9,6 +9,69 @@
   </head>
 
   <body>
+<<<<<<< Updated upstream
+=======
+	  <nav class="nav-links">
+		  <ul class="nav-ul">
+			<li class="nav-li title"> <%= link_to "SongSauce", root_path%> </li>
+			<div class="nav-right">
+		        
+		        <% if !user_signed_in? %>
+		        <li class="nav-li"> 
+					<%=link_to "Login", new_user_session_path, class: "login-link" %>
+				</li>
+				<div id="login-pop">	
+				  <h2>Log in</h2>
+
+				  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+				    <div class="field">
+				      <%= f.label :email %><br />
+				      <%= f.email_field :email, autofocus: true %>
+				    </div>
+
+				    <div class="field">
+				      <%= f.label :password %><br />
+				      <%= f.password_field :password, autocomplete: "off" %>
+				    </div>
+
+				    <% if devise_mapping.rememberable? -%>
+				      <div class="field">
+				        <%= f.check_box :remember_me %>
+				        <%= f.label :remember_me %>
+				      </div>
+				    <% end -%>
+
+				    <div class="actions">
+				      <%= f.submit "Log in" %>
+				    </div>
+				  <% end %>
+
+					<%= link_to('Register', new_user_registration_path)%>
+				</div>
+
+				<li class="nav-li">
+					<%= link_to('Register', new_user_registration_path)%>
+				</li>
+				<% end %>
+
+
+		        <% if user_signed_in? %>
+		        <li class="nav-li"> 
+					<%= link_to "Log Out", destroy_user_session_path, :method => :delete %>
+				</li>
+					<% end %>
+
+					
+				<% if current_user && current_user.admin? %>
+				<li class="nav-li">
+					<%=link_to "New Post", new_post_path %>
+				</li>
+				<% end %>
+
+			</div>
+		  </ul>
+	</nav>
+>>>>>>> Stashed changes
     <%= yield %>
   </body>
 </html>
