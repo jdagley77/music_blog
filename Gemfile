@@ -5,6 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'will_paginate-bootstrap'
+gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'bootstrap-sass'
 gem 'will_paginate', '>= 3.1'
 gem 'devise'
 gem 'record_tag_helper', '~> 1.0'

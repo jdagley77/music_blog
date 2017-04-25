@@ -1,7 +1,7 @@
 <div class="columns">
 	<div id="posts">
 		<h2>Articles</h2>
-		<%= link_to "All Tags", posts_path %><br><br>
+		<%= link_to "All Tags", posts_path, class: "btn" %><br><br>
 		<%= render @posts.reverse.last(5) %>
 		<%= will_paginate @posts %>
 	</div>
